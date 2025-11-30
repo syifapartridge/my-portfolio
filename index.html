@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Syifa's Portfolio</title>
+
+  <!-- Modern typewriter font -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" aria-label="Primary">
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#get-in-touch">Get in Touch</a>
+    <a href="#contact-short">Contact</a>
+  </nav>
+
+  <!-- HEADER / HERO -->
+  <header class="wrap" role="banner" aria-label="Header">
+    <div class="hero">
+      <h1 class="title">Syifa's Portfolio</h1>
+      <div id="typing" class="typing" aria-live="polite"></div>
+    </div>
+
+    <!-- big circular photo, shifted left -->
+    <div class="photo-wrap" aria-hidden="false">
+      <!-- using <img> ensures crisp edges and avoids background artifacts -->
+      <img src="syifaa's photo.jpg" alt="Foto Syifa" class="photo-img" id="profilePhoto" />
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ABOUT -->
+    <section id="about" class="card" aria-labelledby="about-heading">
+      <h2 id="about-heading" class="section-title">About Me</h2>
+      <p class="about-text">Hi, I’m Syifa Ananda Sukmana, an Information Technology student with a background in Digital Business. I’m interested in technology, digital marketing, and system development. I continue to build my skills through projects and learning experiences to create efficient and impactful digital solutions. Here, you can explore some of the projects I’ve worked on.</p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="card" aria-labelledby="projects-heading">
+      <h2 id="projects-heading" class="section-title">Projects</h2>
+      <div class="projects" role="list">
+
+        <article class="project-card" role="listitem" tabindex="0" data-id="p1">
+          <h3>Scholarship Webinar: "Kita Bisa Lolos Beasiswa"</h3>
+          <div class="meta">Role: Chief Executive Organizer • Tools: OBS, Zoom, Canva, Docs</div>
+          <p class="summary">Organized a webinar talk show focusing on scholarship procedures (KIP-K, Bank Indonesia). I coordinated event flow, platforms, and materials.</p>
+        </article>
+
+        <article class="project-card" role="listitem" tabindex="0" data-id="p2">
+          <h3>Nine Stars — Digital Store Management</h3>
+          <div class="meta">Role: Secretary • Tools: Shopee, Buka Olshop, WordPress, Canva</div>
+          <p class="summary">Managed online/offline store operations, marketing, content creation, and reporting.</p>
+        </article>
+
+        <article class="project-card" role="listitem" tabindex="0" data-id="p3">
+          <h3>Daily Financial Recording System (Java)</h3>
+          <div class="meta">Role: System Analyst • Tools: Java</div>
+          <p class="summary">Designed system architecture and requirements for a Java-based daily financial recording system.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="card" aria-labelledby="skills-heading">
+      <h2 id="skills-heading" class="section-title">Skills</h2>
+      <div class="skills-grid" role="list">
+        <button class="skill" data-skill="Canva, Google Ads, Google My Business">Digital Marketing</button>
+        <button class="skill" data-skill="Wordpress">E-commerce</button>
+        <button class="skill" data-skill="Shopee, Tokopedia, Lazada Seller Center">Marketplace</button>
+        <button class="skill" data-skill="HTML, CSS, JavaScript  Tools: VS Code, Git">Web Development</button>
+        <button class="skill" data-skill="Microsoft Word, Microsoft Excel">Data Management</button>
+        <button class="skill" data-skill="Java">Java</button>
+      </div>
+</section>
+
+    <!-- GET IN TOUCH -->
+    <section id="get-in-touch" class="card" aria-labelledby="get-in-touch-heading">
+      <h2 id="get-in-touch-heading" class="section-title">Get in Touch</h2>
+      <form class="contact-form" onsubmit="handleForm(event)" aria-label="Contact form">
+        <input name="name" type="text" placeholder="Your name" required />
+        <input name="email" type="email" placeholder="Your email" required />
+        <input name="subject" type="text" placeholder="Subject" />
+        <textarea name="message" placeholder="How can I help?" required></textarea>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+      <p class="hint">Form provides client-side feedback only — use contact links for direct messages.</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact-short" class="card" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" class="section-title">Contact</h2>
+
+      <!-- contact items only show icon + name. First click shows preview modal, second click (in modal) opens link -->
+      <div class="contacts" role="list">
+        <div class="contact-item" role="listitem">
+          <button class="contact-preview" data-type="email" data-href="mailto:syifaanandasukmana22@gmail.com" aria-haspopup="dialog">
+            <span class="icon" aria-hidden="true">@</span>
+            <span class="label">Email</span>
+          </button>
+        </div>
+
+         <div class="contact-item" role="listitem">
+          <button class="contact-preview" data-type="whatsapp" data-href="https://wa.me/62895423034517" aria-haspopup="dialog">
+            <span class="icon" aria-hidden="true">wa</span>
+            <span class="label">WhatsApp</span>
+          </button>
+        </div>
+
+        <div class="contact-item" role="listitem">
+          <button class="contact-preview" data-type="linkedIn" data-href="https://www.linkedin.com/in/syifa-ananda-sukmana" aria-haspopup="dialog">
+            <span class="icon" aria-hidden="true">in</span>
+            <span class="label">linkedIn</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- bottom quotes (replacing circles) -->
+    <div class="bottom-quotes" aria-hidden="false">
+      <div class="quote">"Always curious, always evolving."</div>
+      <div class="quote">"Learning with purpose, growing with passion."</div>
+      <div class="quote">"Driven by curiosity, shaped by perseverance."</div>
+    </div>
+
+  </main>
+
+  <!-- footer with normal system font -->
+  <footer class="footer">© 2025 Syifa. All Rights Reserved.</footer>
+
+  <!-- Project detail overlay (opens when clicking project) -->
+  <div id="overlay" class="overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="detail" role="document">
+      <button id="closeDetail" class="close" aria-label="Close">✕</button>
+      <h3 id="detailTitle"></h3>
+      <div id="detailMeta" class="meta"></div>
+      <p id="detailBody"></p>
+    </div>
+  </div>
+
+  <!-- contact preview modal -->
+  <div id="contactPreview" class="overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="detail preview">
+      <button id="closeContactPreview" class="close" aria-label="Close">✕</button>
+      <h3 id="previewTitle"></h3>
+      <p id="previewHref" class="muted small"></p>
+      <div style="margin-top:12px"><button id="openContactLink" class="btn">Open Link</button></div>
+    </div>
+  </div>
+
+  <!-- custom cursor -->
+  <div class="cursor-small" id="cursorSmall" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+
+  <!-- Progress Bar HTML -->
+<div id="progress-bar"></div>
+
+<style>
+  /* Progress Bar Styling */
+  #progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background-color: #f7c6d1; /* pink soft */
+    width: 0%;
+    z-index: 9999;
+    transition: width 0.25s ease-out;
+    border-radius: 0 0 4px 4px;
+  }
+</style>
+
+<script>
+  // Update progress bar width on scroll
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+
+    const progressBar = document.getElementById('progress-bar');
+    if (progressBar) {
+      progressBar.style.width = scrollPercent + '%';
+    }
+  });
+</script>
+
+  <!-- Kucing pink interaktif pojok kanan bawah -->
+<div id="cat-pet" role="img" aria-label="Animated pink cat pet" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  z-index: 10000;
+  user-select: none;
+">
+  <svg viewBox="0 0 100 100" width="100" height="100" aria-hidden="true" focusable="false">
+    <!-- Badan -->
+    <ellipse cx="50" cy="70" rx="30" ry="20" fill="#f7c6d1" stroke="#d18aa4" stroke-width="2"/>
+    <!-- Kepala -->
+    <circle cx="50" cy="35" r="25" fill="#f7c6d1" stroke="#d18aa4" stroke-width="2"/>
+    <!-- Telinga kiri -->
+    <polygon points="30,15 40,5 45,25" fill="#f7c6d1" stroke="#d18aa4" stroke-width="2"/>
+    <!-- Telinga kanan -->
+    <polygon points="70,15 60,5 55,25" fill="#f7c6d1" stroke="#d18aa4" stroke-width="2"/>
+    <!-- Mata kiri -->
+    <circle class="eye-left" cx="38" cy="35" r="6" fill="white"/>
+    <circle class="pupil-left" cx="38" cy="35" r="3" fill="black"/>
+    <!-- Mata kanan -->
+    <circle class="eye-right" cx="62" cy="35" r="6" fill="white"/>
+    <circle class="pupil-right" cx="62" cy="35" r="3" fill="black"/>
+    <!-- Hidung -->
+    <polygon points="48,45 52,45 50,50" fill="#d18aa4"/>
+    <!-- Mulut -->
+    <path d="M40,55 Q50,65 60,55" stroke="#d18aa4" stroke-width="2" fill="none" />
+    <!-- Kaki depan kiri -->
+    <ellipse cx="35" cy="85" rx="8" ry="15" fill="#f7c6d1" stroke="#d18aa4" stroke-width="2"/>
+    <!-- Kaki depan kanan -->
+    <ellipse cx="65" cy="85" rx="8" ry="15" fill="#f7c6d1" stroke="#d18aa4" stroke-width="2"/>
+    <!-- Ekor -->
+    <path d="M20,60 Q10,70 20,80" stroke="#d18aa4" stroke-width="6" fill="none" stroke-linecap="round"/>
+  </svg>
+
+  <!-- Balon ucapan -->
+  <div id="cat-speech" style="
+    position: absolute;
+    bottom: 110px;
+    right: 50%;
+    transform: translateX(50%);
+    background: #f7c6d1;
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-size: 16px;
+    color: #a64c69;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(166, 76, 105, 0.4);
+  ">Hi!</div>
+</div>
+
+<style>
+  /* Animasi mata berkedip */
+  @keyframes blink {
+    0%, 5%, 10%, 100% { transform: scaleY(1); }
+    7.5% { transform: scaleY(0.1); }
+  }
+  .eye-left, .eye-right, .pupil-left, .pupil-right {
+    transform-origin: center;
+    animation: blink 4s infinite;
+  }
+
+  /* Animasi jalan maju mundur */
+  @keyframes walk-right {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-15px); }
+  }
+
+  #cat-pet {
+    animation: walk-right 7s ease-in-out infinite;
+  }
+</style>
+
+<script>
+  const catPet = document.getElementById('cat-pet');
+  const catSpeech = document.getElementById('cat-speech');
+
+  catPet.addEventListener('click', () => {
+    catSpeech.style.opacity = '1';
+    setTimeout(() => {
+      catSpeech.style.opacity = '0';
+    }, 2500);
+  });
+</script>
+
+<!-- Help Button -->
+<button id="helpButton" style="
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background: #f7c6d1; /* soft pink */
+  border: none;
+  color: #5a2c3f; /* muted text */
+  padding: 14px 20px;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(247, 198, 209, 0.6);
+  z-index: 10001;
+  transition: background 0.3s ease, color 0.3s ease;
+  user-select: none;
+  font-family: 'Space Mono', monospace;
+">Help & Feedback</button>
+
+<!-- Help Modal -->
+<div id="helpModal" role="dialog" aria-modal="true" aria-labelledby="helpTitle" aria-hidden="true" style="
+  position: fixed;
+  inset: 0;
+  background: rgba(247, 198, 209, 0.3); /* translucent soft pink */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 10000;
+  font-family: 'Space Mono', monospace;
+">
+  <div style="
+    background: #fff8fb; /* very soft pink background */
+    padding: 24px 32px;
+    border-radius: 16px;
+    max-width: 360px;
+    box-shadow: 0 30px 80px rgba(87, 57, 63, 0.15);
+    text-align: center;
+    color: #5a2c3f; /* muted text */
+  ">
+    <h2 id="helpTitle" style="margin-top:0; margin-bottom:16px;">Special Notes</h2>
+    <p style="margin:12px 0; line-height:1.4; font-weight:500;">This portfolio is still under development, so some sections may be updated continuously.</p>
+    <p style="margin:12px 0; line-height:1.4; font-weight:500;">Thank you for visiting, feel free to leave feedback!</p>
+    <button id="closeHelp" aria-label="Close help" style="
+      margin-top: 20px;
+      background: #f7c6d1;
+      border: none;
+      color: #5a2c3f;
+      padding: 8px 14px;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease;
+      font-family: 'Space Mono', monospace;
+    ">✕</button>
+  </div>
+</div>
+
+<script>
+  const helpButton = document.getElementById('helpButton');
+  const helpModal = document.getElementById('helpModal');
+  const closeHelp = document.getElementById('closeHelp');
+
+  helpButton.addEventListener('click', () => {
+    const isOpen = helpModal.getAttribute('aria-hidden') === 'false';
+    if (isOpen) {
+      helpModal.setAttribute('aria-hidden', 'true');
+      helpButton.setAttribute('aria-expanded', 'false');
+      helpModal.style.opacity = 0;
+      helpModal.style.pointerEvents = 'none';
+    } else {
+      helpModal.setAttribute('aria-hidden', 'false');
+      helpButton.setAttribute('aria-expanded', 'true');
+      helpModal.style.opacity = 1;
+      helpModal.style.pointerEvents = 'auto';
+    }
+  });
+
+  closeHelp.addEventListener('click', () => {
+    helpModal.setAttribute('aria-hidden', 'true');
+    helpButton.setAttribute('aria-expanded', 'false');
+    helpModal.style.opacity = 0;
+    helpModal.style.pointerEvents = 'none';
+  });
+
+  helpModal.addEventListener('click', (e) => {
+    if (e.target === helpModal) {
+      helpModal.setAttribute('aria-hidden', 'true');
+      helpButton.setAttribute('aria-expanded', 'false');
+      helpModal.style.opacity = 0;
+      helpModal.style.pointerEvents = 'none';
+    }
+  });
+</script>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
