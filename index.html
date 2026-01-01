@@ -384,9 +384,138 @@
     }
   });
 </script>
+
+<style>
+/* =================================================
+   MOBILE ONLY — FINAL FIX TOTAL (BERES & WARAS)
+   ================================================= */
+@media (max-width: 768px) {
+
+  /* ===== GLOBAL ===== */
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    padding-top: 64px; /* aman buat navbar fixed */
+  }
+
+  /* ===== NAVBAR MOBILE — TENGAH FIX (ANTI GESER) ===== */
+  .nav {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: max-content;
+    max-width: calc(100% - 24px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+
+    padding: 8px 14px;
+    font-size: 12px;
+
+    background: #fff2f7;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(255, 150, 190, 0.25);
+
+    z-index: 9999;
+  }
+
+  .nav a {
+    padding: 4px 6px;
+    white-space: nowrap;
+    font-weight: 600;
+  }
+
+  /* ===== HERO ===== */
+  .wrap {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px 16px 0;
+  }
+
+  .hero {
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  /* ===== FOTO PROFIL — BULAT + SHADOW RAPI ===== */
+  .photo-wrap::before,
+  .photo-wrap::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .photo-wrap {
+    width: 220px;
+    height: 220px;
+    margin: 28px auto 0;
+
+    border-radius: 50%;
+    background: none !important;
+    box-shadow: none !important;
+  }
+
+  .photo-img {
+    width: 220px;
+    height: 220px;
+
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+
+    /* SHADOW PINK — HALUS, NGIKUT LINGKAR */
+    box-shadow: 0 10px 22px rgba(255, 155, 190, 0.35);
+
+    filter: none !important;
+  }
+
+  /* ===== GRID ===== */
+  .projects,
+  .skills-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ===== FORM ===== */
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  /* ===== MATIIN EFEK DESKTOP ===== */
+  .cursor-small,
+  .cursor-ring {
+    display: none !important;
+  }
+
+  #cat-pet {
+    width: 70px !important;
+    height: 70px !important;
+    bottom: 12px !important;
+    right: 12px !important;
+  }
+
+  #helpButton {
+    bottom: 12px !important;
+    left: 12px !important;
+    padding: 10px 14px !important;
+    font-size: 12px !important;
+  }
+}
+</style>
   
 </body>
 </html>
+
 
 
 
